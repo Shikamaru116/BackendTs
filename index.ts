@@ -1,7 +1,10 @@
 const express = require("express")
-import router from "./src/routes";
+import routes from "./src/network";
+
 
 const app = express();
+routes(app)
+
 
 const port = 9000;
 
@@ -10,7 +13,7 @@ const initialize = () => {
 }
 
 
-router(app);
+routes(app);
 
 
 
